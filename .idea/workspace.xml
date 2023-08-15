@@ -9,6 +9,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Engine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/SuperEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/SuperEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Truck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Vehicle.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -88,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1692016372215</updated>
-      <workItem from="1692016373539" duration="24635000" />
+      <workItem from="1692016373539" duration="28381000" />
     </task>
     <servers />
   </component>
