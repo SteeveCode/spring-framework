@@ -9,7 +9,6 @@ public class Main {
 
         var di = new AnnotationConfigApplicationContext("com.spring.tutorial");
         var car = di.getBean(Car.class);
-        car.start();
         System.out.println("Car Instance: " + car);
 
         printBeanDefinitions(di);
