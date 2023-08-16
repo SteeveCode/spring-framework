@@ -4,8 +4,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.ManagedBean;
+import javax.inject.Named;
+
 @Component
-//@Qualifier("superb")
-@Fuel(fuelType = Fuel.FuelType.Electricity, capacity = 20)
+// @ManagedBean
+//@Qualifier("superEngine")
+//@Named("superEngine")
 public class SuperEngine extends Engine{
 }

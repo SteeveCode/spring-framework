@@ -1,0 +1,18 @@
+Earlier Notes:
+
+If the injection point is not annotated with @Qualifier, it will ignore all @Qualifier placed at the class level
+and will not try to use the qualifier name to resolve a conflict
+
+@Component annotation is used for defining bean definition
+@Qualifier annotation is used to resolve ambiguity in choosing a bean candidate in the case of a conflict
+
+@Resources is used for a special kind of combinatorial key.By using the @Resource, we can indicate the exact bean
+definition name that we seek by combining the type and unique bean definition name. A short coming is that It cannot
+be used with constructors at injection point. However, it can only be used on fields and setter methods with only one
+parameter.
+
+## @Named & @ManagedBean Like @Component & @Qualifier ##
+These are extra annotations from JSRs and not from Spring. However, Spring still recognizes them. e.g.
+1. @ManagedBean: this functions exactly as the @Component annotation.
+2. @Named: this also functions exactly as the @Component annotation. It can be used on top of a class and at the
+injection point to help spring select between bean definitions.
