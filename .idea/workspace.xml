@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f59e62b-1d93-4f24-ab2f-b9879669c5d1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/SuperEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/SuperEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/notes" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/tutorial/notes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "c85743c79ac70f7dc8f08680d03e0d53",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -89,6 +91,8 @@
       <option name="presentableId" value="Default" />
       <updated>1692016372215</updated>
       <workItem from="1692016373539" duration="37455000" />
+      <workItem from="1692187555352" duration="3000" />
+      <workItem from="1692193236223" duration="5146000" />
     </task>
     <servers />
   </component>

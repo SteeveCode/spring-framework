@@ -1,4 +1,3 @@
-Earlier Notes:
 
 If the injection point is not annotated with @Qualifier, it will ignore all @Qualifier placed at the class level
 and will not try to use the qualifier name to resolve a conflict
@@ -16,3 +15,18 @@ These are extra annotations from JSRs and not from Spring. However, Spring still
 1. @ManagedBean: this functions exactly as the @Component annotation.
 2. @Named: this also functions exactly as the @Component annotation. It can be used on top of a class and at the
 injection point to help spring select between bean definitions.
+
+@Conditional: this is used to determine if a bean definition should be added into the list of bean definition or not
+under certain conditions. However, the @Conditional annotation is not used directly when defining a bean definition. It
+serves as a meta annotation to another meta annotated annotation which is used instead i.e @Profile. It is @Profile
+that is actual used. The idea of @Profile("") is that we will pass in some string that will indicate the condition that
+must be satisfied before the bean is activated. A typical example is in say a test environment or if the app runs in an
+environment with limited resources such as memory.Activating a profile does not have anything to do with bean definitions
+that does not have a profile set. Beans with no profiles always gets added to the bean definition list. To activate a
+profile, the code below must be used in the main class
+to create the IOC container(application context).
+
+ var di = new AnnotationConfigApplicationContext();
+        di.getEnvironment().setActiveProfiles("test");
+        di.scan("com.spring.tutorial");
+        di.refresh();
