@@ -5,10 +5,10 @@ It can be configured with: XML, Annotation Config or Java Based Config.
 If the injection point is not annotated with @Qualifier, it will ignore all @Qualifier placed at the class level
 and will not try to use the qualifier name to resolve a conflict
 
-@Component annotation is used for defining bean definition
-@Qualifier annotation is used to resolve ambiguity in choosing a bean candidate in the case of a conflict
+## @Component annotation is used for defining bean definition
+## @Qualifier annotation is used to resolve ambiguity in choosing a bean candidate in the case of a conflict
 
-@Resources is used for a special kind of combinatorial key.By using the @Resource, we can indicate the exact bean
+## @Resources is used for a special kind of combinatorial key.By using the @Resource, we can indicate the exact bean
 definition name that we seek by combining the type and unique bean definition name. A short coming is that It cannot
 be used with constructors at injection point. However, it can only be used on fields and setter methods with only one
 parameter.
@@ -19,7 +19,7 @@ These are extra annotations from JSRs and not from Spring. However, Spring still
 2. @Named: this also functions exactly as the @Component annotation. It can be used on top of a class and at the
 injection point to help spring select between bean definitions.
 
-@Conditional: this is used to determine if a bean definition should be added into the list of bean definition or not
+## @Conditional: this is used to determine if a bean definition should be added into the list of bean definition or not
 under certain conditions. However, the @Conditional annotation is not used directly when defining a bean definition. It
 serves as a meta annotation to another meta annotated annotation which is used instead i.e @Profile. It is @Profile
 that is actual used. The idea of @Profile("") is that we will pass in some string that will indicate the condition that
@@ -34,7 +34,7 @@ to create the IOC container(application context).
         di.scan("com.spring.tutorial");
         di.refresh();
 
- # BeanPostProcessor
+ ## BeanPostProcessor
  If you wish to extend the behaviour of the application context, you don't need to override or extend the
  ApplicationContext class itself. The ApplicationContext provides a bunch of hooks, callbacks that you can to do that.
  The most important way of extending the ApplicationContext behaviour is to use an interface names BeanPostProcessor.
@@ -44,3 +44,6 @@ to create the IOC container(application context).
 
  Note:
  The BeanPostProcessor is typically used by developers that build frameworks with the aim to extend the spring framework.
+
+ ## Hash Code Method
+ The hashCode() method, typically used in the toString() returns the memory address of an object
