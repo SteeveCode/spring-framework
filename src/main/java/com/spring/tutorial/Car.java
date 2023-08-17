@@ -1,14 +1,14 @@
 package com.spring.tutorial;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.inject.Inject;
-import javax.inject.Named;
 @Component
 @Scope("singleton")
 //@Scope("prototype")
+@Lazy
 public class Car {
     @Autowired
     private Engine engine;

@@ -12,10 +12,8 @@ public class Main {
         di.scan("com.spring.tutorial");
         di.refresh();
 
-        var car1 = di.getBean(Car.class);
-        var car2 = di.getBean(Car.class);
-        System.out.println("Car Instance: " + car1);
-        System.out.println("Car Instance: " +  car2);
+//        var car1 = di.getBean(Car.class);
+//        System.out.println("Car Instance: " + car1);
 
 
         printBeanDefinitions(di);
