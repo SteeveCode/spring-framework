@@ -1,3 +1,6 @@
+The ApplicationContext interface is responsible for everything about the IOC container and dependency injection. One
+of its responsibility is gathering all the bean definitions from all the sources of all the configurations.
+It can be configured with: XML, Annotation Config or Java Based Config.
 
 If the injection point is not annotated with @Qualifier, it will ignore all @Qualifier placed at the class level
 and will not try to use the qualifier name to resolve a conflict
@@ -30,3 +33,14 @@ to create the IOC container(application context).
         di.getEnvironment().setActiveProfiles("test");
         di.scan("com.spring.tutorial");
         di.refresh();
+
+ # BeanPostProcessor
+ If you wish to extend the behaviour of the application context, you don't need to override or extend the
+ ApplicationContext class itself. The ApplicationContext provides a bunch of hooks, callbacks that you can to do that.
+ The most important way of extending the ApplicationContext behaviour is to use an interface names BeanPostProcessor.
+ The BeanPostProcessor allows us to provide custom logic before and after each bean is instantiated, configured &
+ initialized. The way to register a BeanPostProcessor is by creating a class that extends BeanPostProcessor a placing
+ the @Component annotation on top of it.
+
+ Note:
+ The BeanPostProcessor is typically used by developers that build frameworks with the aim to extend the spring framework.
