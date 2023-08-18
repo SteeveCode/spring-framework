@@ -47,3 +47,19 @@ to create the IOC container(application context).
 
  ## Hash Code Method
  The hashCode() method, typically used in the toString() returns the memory address of an object
+
+ ## PreConstruct & PostDestroy Bean Life Cycle
+
+ A object goes through multiple phases and cycles throughout the life time of its scope. The first phase or cycle an
+ object experiences is the construction phase. However, there are times that object instance are not capable of being
+ fully constructed at the time of calling the constructor. One of the things that the IOC does besides calling the
+ constructor method during the life cycle of a bean is that it can introduce extra life cycle related functions that will
+ be called when all the field dependencies have been injected. Typical examples of these methods are @PostConstruct &
+ @PreDestroy.
+
+## AutoClosable / Closable Interface
+
+Another way of introducing destruction point in the life cycle of an object is to make the class implement either the
+AutoClosable or Closable interface and then override the close() with custom logic. It is safe to implement the
+AutoClosable or Closable interface because they are from the Java JDK and does not couple your code to the framework.
+Implementing an interface from the spring framework is not recommended.
