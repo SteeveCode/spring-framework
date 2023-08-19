@@ -5,21 +5,25 @@ It can be configured with: XML, Annotation Config or Java Based Config.
 If the injection point is not annotated with @Qualifier, it will ignore all @Qualifier placed at the class level
 and will not try to use the qualifier name to resolve a conflict
 
-## @Component annotation is used for defining bean definition
-## @Qualifier annotation is used to resolve ambiguity in choosing a bean candidate in the case of a conflict
+## @Component
+This annotation is used for defining bean definition & configuration
+## @Qualifier
+This annotation is used to resolve ambiguity in choosing a bean candidate in the case of a conflict
 
-## @Resources is used for a special kind of combinatorial key.By using the @Resource, we can indicate the exact bean
+## @Resources
+This is used for a special kind of combinatorial key.By using the @Resource, we can indicate the exact bean
 definition name that we seek by combining the type and unique bean definition name. A short coming is that It cannot
 be used with constructors at injection point. However, it can only be used on fields and setter methods with only one
 parameter.
 
-## @Named & @ManagedBean Like @Component & @Qualifier ##
+## @Named & @ManagedBean Like @Component & @Qualifier
 These are extra annotations from JSRs and not from Spring. However, Spring still recognizes them. e.g.
 1. @ManagedBean: this functions exactly as the @Component annotation.
 2. @Named: this also functions exactly as the @Component annotation. It can be used on top of a class and at the
 injection point to help spring select between bean definitions.
 
-## @Conditional: this is used to determine if a bean definition should be added into the list of bean definition or not
+## @Conditional
+This is used to determine if a bean definition should be added into the list of bean definition or not
 under certain conditions. However, the @Conditional annotation is not used directly when defining a bean definition. It
 serves as a meta annotation to another meta annotated annotation which is used instead i.e @Profile. It is @Profile
 that is actual used. The idea of @Profile("") is that we will pass in some string that will indicate the condition that
@@ -49,7 +53,6 @@ to create the IOC container(application context).
  The hashCode() method, typically used in the toString() returns the memory address of an object
 
  ## PreConstruct & PostDestroy Bean Life Cycle
-
  A object goes through multiple phases and cycles throughout the life time of its scope. The first phase or cycle an
  object experiences is the construction phase. However, there are times that object instance are not capable of being
  fully constructed at the time of calling the constructor. One of the things that the IOC does besides calling the
@@ -58,8 +61,13 @@ to create the IOC container(application context).
  @PreDestroy.
 
 ## AutoClosable / Closable Interface
-
 Another way of introducing destruction point in the life cycle of an object is to make the class implement either the
 AutoClosable or Closable interface and then override the close() with custom logic. It is safe to implement the
 AutoClosable or Closable interface because they are from the Java JDK and does not couple your code to the framework.
 Implementing an interface from the spring framework is not recommended.
+
+## @DependsOn
+This is used for specifying the order of initialization and destruction of a bean. The annotation ensure that the
+dependencies are initialized first, and then the dependent. When the bean is being destroyed, the order is reversed.
+If an order is not set using this annotation, the application context will be responsible for choosing an order at
+random in which to initialize the beans .

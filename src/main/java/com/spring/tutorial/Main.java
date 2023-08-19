@@ -2,8 +2,10 @@ package com.spring.tutorial;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Optional;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         printHeading();
 
@@ -12,12 +14,12 @@ public class Main {
         di.scan("com.spring.tutorial");
         di.refresh();
 
-        var car1 = di.getBean(Car.class);
-        System.out.println("Car Instance: " + car1);
-
+        var car = di.getBean(Car.class);
+        System.out.println("Car Instance: " + car);
 
         printBeanDefinitions(di);
 
+        car.close();
     }
     private static void printHeading(){
         System.out.println("****************** Spring Application ***************************");
